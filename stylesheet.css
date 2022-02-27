@@ -1,59 +1,86 @@
 .grid-container {
   display: grid;
-  gap: 50px 20px;
-  padding: 10px;
+  gap: 0px 0px;
+  padding: 0px;
   grid-template-columns: auto auto;
+  margin: 0px 0px 0px 0px;
+}
+
+body {
+  margin: 0px;
 }
 
 /* Radio buttons */
 
-.flex-container {
+.container {
   padding: 0;
-  margin: 0;
+  margin: 0px 0px 10px 0px;
   list-style: none;
   /* display: flex; */
   display: inline;
   justify-content: space-between;
 }
+
 .longhand {
   flex-flow: wrap row;
 }
-.flex-item {
-  width: 30%;
+
+.item {
+  width: 100px;
   color: #c3d0d9;
   border: 1px solid #c3d0d9;
   height: 50px;
   font-size: 1.3em;
   text-align: center;
-  padding: 10px;
-  /* display: inline-block; */
-}
-label {
-  height: 100%;
-  display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10px;
+  float: left;
+  /* display: inline-block; */
 }
+
+label {
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  display: block;
+}
+
 input:checked + label {
   background: #eee;
 }
+
 input {
   display: none;
+}
+
+/* Text Boxes */
+
+.grid-container {
+  clear: both;
+  height: 200px;
 }
 
 .entry-1 {
   grid-column: 1/2;
   resize: none;
+  clear: both;
+  display: block;
 }
 
 .entry-2 {
   grid-column: 2/3;
   resize: none;
+  clear: both;
+  display: block;
 }
+
+/* Header */
 
 .header-row {
   padding: 0px;
   margin: 0px;
+  clear: both;
 }
 
 .header-row:after {
@@ -66,7 +93,10 @@ input {
   float: left;
   width: calc(50% - 10px);
   background-color: orange;
-  padding-left: 10px;
+  padding: 0px 0px 0px 10px;
+  margin: 0px 0px 10px 0px;
+  margin-bottom: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .header-column-right {
@@ -74,5 +104,7 @@ input {
   width: calc(50% - 10px);
   text-align: right;
   background-color: orange;
-  padding-right: 10px;
+  padding: 0px 10px 0px 0px;
+  margin: 0px 0px 10px 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }

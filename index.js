@@ -31,14 +31,44 @@ function green(name)
 green('John');
 green('Mary');
 
-function template1Click()
+function t1click()
 {
-    alert("Template 1 has been clicked");
+    document.getElementById("dispTemplate").innerHTML = `<div class="header-row">
+                                                            <h1 class="header-column-left">Example Name</h1>
+                                                            <h1 class="header-column-right">9:12</h1>
+                                                        </div>
+
+                                                        <div>
+                                                            <form class="grid-container">
+                                                                <!--<label for="entry1" class="entry-1">box1</label>-->
+                                                                <textarea id="entry1" class="entry-1" type="text"></textarea>
+
+                                                                <!--<label for="entry2" class="entry-2">box2</label>-->
+                                                                <textarea id="entry2" class="entry-2" type="text"></textarea>
+                                                            </form>
+                                                        </div>`;
+    // alert("template 1 selected");
 }
 
-function template2Click()
+function t2click()
 {
-    alert("Template 2 has been clicked")
+    document.getElementById("dispTemplate").innerHTML = `
+
+                                                        <div>
+                                                            <form class="grid-container">
+                                                                <!--<label for="entry1" class="entry-1">box1</label>-->
+                                                                <textarea id="entry1" class="entry-1" type="text"></textarea>
+
+                                                                <!--<label for="entry2" class="entry-2">box2</label>-->
+                                                                <textarea id="entry2" class="entry-2" type="text"></textarea>
+                                                            </form>
+                                                        </div>
+                                                        
+                                                        <div class="header-row">
+                                                            <h1 class="header-column-left">Example Name</h1>
+                                                            <h1 class="header-column-right">9:14</h1>
+                                                        </div>`;
+    // alert("template 1 selected");
 }
 
 /*
