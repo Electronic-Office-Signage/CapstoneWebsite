@@ -54,11 +54,87 @@ input {
   display: none;
 }
 
+/* Color Picker */
+
+.container-color {
+  padding: 0;
+  margin: 0px 0px 10px 0px;
+  list-style: none;
+  /* display: flex; */
+  display: inline;
+  justify-content: space-between;
+  grid-row: 2/3;
+}
+
+.container-color2 {
+  padding: 0;
+  margin: 0px 0px 10px 0px;
+  list-style: none;
+  /* display: flex; */
+  display: inline;
+  justify-content: space-between;
+  grid-row: 2/3;
+}
+
+.color-item {
+  width: 20px;
+  color: #c3d0d9;
+  /* background: #6200ff; */
+  border: 1px solid #c3d0d9;
+  height: 20px;
+  font-size: 1.3em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  float: left;
+  /* display: inline-block; */
+}
+
+.color-item2 {
+  width: 20px;
+  color: #c3d0d9;
+  /* background: #6200ff; */
+  border: 1px solid #c3d0d9;
+  height: 20px;
+  font-size: 1.3em;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  float: left;
+  /* display: inline-block; */
+}
+
+#color1 {
+  background: #000000;
+}
+
+#color2 {
+  background: #1b9610;
+}
+
+#color3 {
+  background: #6200ff;
+}
+
+#color4 {
+  background: #ff0000;
+}
+
+#color5 {
+  background: #fbff00;
+}
+
+#color6 {
+  background: #ffae00;
+}
+
 /* Text Boxes */
 
 .grid-container {
   clear: both;
-  height: 200px;
+  height: 400px;
 }
 
 .entry-1 {
@@ -66,10 +142,19 @@ input {
   resize: none;
   clear: both;
   display: block;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .entry-2 {
   grid-column: 2/3;
+  resize: none;
+  clear: both;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.entry-3 {
+  grid-column: 1/3;
   resize: none;
   clear: both;
   display: block;
