@@ -17,10 +17,13 @@ let person = {
 
 let displayInfo =
 {
-    entry1Color: "black",
-    entry1Color: "black",
-    entry1Font: "helvetica",
-    entry2Font: "helvetica"
+    name: 't-huff',
+    uid: 12345,
+    template_id: 0,
+    title_text: 'yo mama',
+    title_color: 0,
+    box1_text: 'yo mama house',
+    box1_color: 1
 };
 
 //dot notation
@@ -45,6 +48,7 @@ green('Mary');
 
 function t1click()
 {
+    console.log("t1click");
     document.getElementById("dispTemplate").innerHTML = `<div class="header-row">
                                                             <h1 class="header-column-left">Example Name</h1>
                                                             <h1 class="header-column-right">9:12</h1>
@@ -75,9 +79,37 @@ function t1click()
                                                                     <li class="color-item" id="color6"><input id="color-radio6" type="radio" onclick="e1click('orange')" name="radio">
                                                                         <label for="color-radio6" ></label>
                                                                     </li>
-
                                                                 </ul>
+
+
+                                                                <!-- <label for="entry2" class="entry-2">box2</label>
+                                                                <textarea id="entry2" class="entry-2" type="text"></textarea> -->
+
+                                                                <!-- color picker -->
+                                                                <!-- <ul class="container-color">
+                                                                    <li class="color-item" id="color1"><input id="color2-radio1" type="radio" onclick="e2click('black')" name="radio2">
+                                                                        <label for="color2-radio1"></label>
+                                                                    </li>
+                                                                    <li class="color-item" id="color2"><input id="color2-radio2" type="radio" onclick="e2click('green')" name="radio2">
+                                                                        <label for="color2-radio2"></label>
+                                                                    </li>
+                                                                    <li class="color-item" id="color3"><input id="color2-radio3" type="radio" onclick="e2click('blue')" name="radio2">
+                                                                        <label for="color2-radio3" ></label>
+                                                                    </li>
+                                                                    <li class="color-item" id="color4"><input id="color2-radio4" type="radio" onclick="e2click('red')" name="radio2">
+                                                                        <label for="color2-radio4"></label>
+                                                                    </li>
+                                                                    <li class="color-item" id="color5"><input id="color2-radio5" type="radio" onclick="e2click('yellow')" name="radio2">
+                                                                        <label for="color2-radio5"></label>
+                                                                    </li>
+                                                                    <li class="color-item" id="color6"><input id="color2-radio6" type="radio" onclick="e2click('orange')" name="radio2">
+                                                                        <label for="color2-radio6" ></label>
+                                                                    </li>
+                                                                </ul> -->
+
+
                                                             </form>
+                                                        </div>
                                                         </div>`;
 }
 
@@ -119,71 +151,71 @@ function t2click()
     // alert("template 1 selected");
 }
 
-function t3click()
-{
-    document.getElementById("dispTemplate").innerHTML = `<div class="header-row">
-                                                            <h1 class="header-column-left">Example Name</h1>
-                                                            <h1 class="header-column-right">9:12</h1>
-                                                        </div>
+// function t3click()
+// {
+//     document.getElementById("dispTemplate").innerHTML = `<div class="header-row">
+//                                                             <h1 class="header-column-left">Example Name</h1>
+//                                                             <h1 class="header-column-right">9:12</h1>
+//                                                         </div>
 
-                                                        <div>
-                                                            <form class="grid-container">
-                                                                <!--<label for="entry1" class="entry-1">box1</label>-->
-                                                                <textarea id="entry1" class="entry-1" type="text"></textarea>
+//                                                         <div>
+//                                                             <form class="grid-container">
+//                                                                 <!--<label for="entry1" class="entry-1">box1</label>-->
+//                                                                 <textarea id="entry1" class="entry-1" type="text"></textarea>
 
-                                                                <!-- color picker -->
-                                                                <ul class="container-color">
-                                                                    <li class="color-item" id="color1"><input id="color-radio1" type="radio" onclick="e1click('black')" name="radio">
-                                                                        <label for="color-radio1"></label>
-                                                                    </li>
-                                                                    <li class="color-item" id="color2"><input id="color-radio2" type="radio" onclick="e1click('green')" name="radio">
-                                                                        <label for="color-radio2"></label>
-                                                                    </li>
-                                                                    <li class="color-item" id="color3"><input id="color-radio3" type="radio" onclick="e1click('blue')" name="radio">
-                                                                        <label for="color-radio3" ></label>
-                                                                    </li>
-                                                                    <li class="color-item" id="color4"><input id="color-radio4" type="radio" onclick="e1click('red')" name="radio">
-                                                                        <label for="color-radio4"></label>
-                                                                    </li>
-                                                                    <li class="color-item" id="color5"><input id="color-radio5" type="radio" onclick="e1click('yellow')" name="radio">
-                                                                        <label for="color-radio5"></label>
-                                                                    </li>
-                                                                    <li class="color-item" id="color6"><input id="color-radio6" type="radio" onclick="e1click('orange')" name="radio">
-                                                                        <label for="color-radio6" ></label>
-                                                                    </li>
-                                                                </ul>
-
-
-                                                                <!--<label for="entry2" class="entry-2">box2</label>-->
-                                                                <textarea id="entry2" class="entry-2" type="text"></textarea>
-
-                                                                <!-- color picker -->
-                                                                <ul class="container-color">
-                                                                    <li class="color-item" id="color1"><input id="color2-radio1" type="radio" onclick="e2click('black')" name="radio2">
-                                                                        <label for="color2-radio1"></label>
-                                                                    </li>
-                                                                    <li class="color-item" id="color2"><input id="color2-radio2" type="radio" onclick="e2click('green')" name="radio2">
-                                                                        <label for="color2-radio2"></label>
-                                                                    </li>
-                                                                    <li class="color-item" id="color3"><input id="color2-radio3" type="radio" onclick="e2click('blue')" name="radio2">
-                                                                        <label for="color2-radio3" ></label>
-                                                                    </li>
-                                                                    <li class="color-item" id="color4"><input id="color2-radio4" type="radio" onclick="e2click('red')" name="radio2">
-                                                                        <label for="color2-radio4"></label>
-                                                                    </li>
-                                                                    <li class="color-item" id="color5"><input id="color2-radio5" type="radio" onclick="e2click('yellow')" name="radio2">
-                                                                        <label for="color2-radio5"></label>
-                                                                    </li>
-                                                                    <li class="color-item" id="color6"><input id="color2-radio6" type="radio" onclick="e2click('orange')" name="radio2">
-                                                                        <label for="color2-radio6" ></label>
-                                                                    </li>
-                                                                </ul>
+//                                                                 <!-- color picker -->
+//                                                                 <ul class="container-color">
+//                                                                     <li class="color-item" id="color1"><input id="color-radio1" type="radio" onclick="e1click('black')" name="radio">
+//                                                                         <label for="color-radio1"></label>
+//                                                                     </li>
+//                                                                     <li class="color-item" id="color2"><input id="color-radio2" type="radio" onclick="e1click('green')" name="radio">
+//                                                                         <label for="color-radio2"></label>
+//                                                                     </li>
+//                                                                     <li class="color-item" id="color3"><input id="color-radio3" type="radio" onclick="e1click('blue')" name="radio">
+//                                                                         <label for="color-radio3" ></label>
+//                                                                     </li>
+//                                                                     <li class="color-item" id="color4"><input id="color-radio4" type="radio" onclick="e1click('red')" name="radio">
+//                                                                         <label for="color-radio4"></label>
+//                                                                     </li>
+//                                                                     <li class="color-item" id="color5"><input id="color-radio5" type="radio" onclick="e1click('yellow')" name="radio">
+//                                                                         <label for="color-radio5"></label>
+//                                                                     </li>
+//                                                                     <li class="color-item" id="color6"><input id="color-radio6" type="radio" onclick="e1click('orange')" name="radio">
+//                                                                         <label for="color-radio6" ></label>
+//                                                                     </li>
+//                                                                 </ul>
 
 
-                                                            </form>
-                                                        </div>`;
-    // alert("template 1 selected");
-}
+//                                                                 <!--<label for="entry2" class="entry-2">box2</label>-->
+//                                                                 <textarea id="entry2" class="entry-2" type="text"></textarea>
+
+//                                                                 <!-- color picker -->
+//                                                                 <ul class="container-color">
+//                                                                     <li class="color-item" id="color1"><input id="color2-radio1" type="radio" onclick="e2click('black')" name="radio2">
+//                                                                         <label for="color2-radio1"></label>
+//                                                                     </li>
+//                                                                     <li class="color-item" id="color2"><input id="color2-radio2" type="radio" onclick="e2click('green')" name="radio2">
+//                                                                         <label for="color2-radio2"></label>
+//                                                                     </li>
+//                                                                     <li class="color-item" id="color3"><input id="color2-radio3" type="radio" onclick="e2click('blue')" name="radio2">
+//                                                                         <label for="color2-radio3" ></label>
+//                                                                     </li>
+//                                                                     <li class="color-item" id="color4"><input id="color2-radio4" type="radio" onclick="e2click('red')" name="radio2">
+//                                                                         <label for="color2-radio4"></label>
+//                                                                     </li>
+//                                                                     <li class="color-item" id="color5"><input id="color2-radio5" type="radio" onclick="e2click('yellow')" name="radio2">
+//                                                                         <label for="color2-radio5"></label>
+//                                                                     </li>
+//                                                                     <li class="color-item" id="color6"><input id="color2-radio6" type="radio" onclick="e2click('orange')" name="radio2">
+//                                                                         <label for="color2-radio6" ></label>
+//                                                                     </li>
+//                                                                 </ul>
+
+
+//                                                             </form>
+//                                                         </div>`;
+//     // alert("template 1 selected");
+// }
 
 function e1click(color)
 {
@@ -196,6 +228,18 @@ function e2click(color)
     document.getElementById("entry2").style.color = color;
     displayInfo.entry2Color = color;
 }
+
+function submitClick()
+{
+    console.log("submit click");
+    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+    var theUrl = "http://eos-services.onu.edu:5000/api/user";
+    xmlhttp.open("POST", theUrl);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send(JSON.stringify(displayInfo));
+}
+
+// post info
 
 /*
 if(mouseClick && button=red)
