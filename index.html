@@ -13,24 +13,23 @@
         <script src="index.js"></script>
 
         <ul class="container longhand">
-            <li class="item"><input id="radio1" type="radio" onclick="t1click()" name="radio">
-                <label for="radio1">Template 1</label>
-            </li>
-            <li class="item"><input id="radio2" type="radio" onclick="t2click()" name="radio">
-                <label for="radio2">Template 2</label>
+            <li class="item"><input id="radio1" type="radio" onclick="t1click([0,1])" name="radio">
+                <label for="radio1">Change Template</label>
             </li>
             <!-- <li class="item"><input id="radio3" type="radio" onclick="t3click()" name="radio">
                 <label for="radio3">Template 3</label>
             </li> -->
         </ul>
 
-        <div id="dispTemplate">
+        <div class="dispTemplate">
             <div class="header-row">
-                <h1 class="header-column-left">Example Name</h1>
-                <h1 class="header-column-right">9:12</h1>
+                <h1 class="header-column-left">
+                    <label id="titleText" contenteditable="True">Title of Post</label>
+                </h1>
+                <h1 class="header-column-right" id="updateTime">No New Updates </h1>
             </div>
             
-            <div>
+            <div class="mainBody">
                 <form class="grid-container">
                     <!--<label for="entry1" class="entry-1">box1</label>-->
                     <textarea id="entry1" class="entry-1" type="text"></textarea>
@@ -89,7 +88,7 @@
         </div>
     </div>
     
-    <div class="submit_container" contenteditable>
+    <div class="submit_container" contenteditable="False">
         <div id="submit_button" onclick="submitClick()"> 
             Submit 
         </div>
