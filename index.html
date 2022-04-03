@@ -24,7 +24,7 @@
         <div class="dispTemplate">
             <div class="header-row">
                 <h1 class="header-column-left">
-                    <label id="titleText" contenteditable="True">Title of Post</label>
+                    <label id="titleText" contenteditable="True" onclick="titleStuff()">Title of Post</label>
                 </h1>
                 <h1 class="header-column-right" id="updateTime">No New Updates </h1>
             </div>
@@ -36,7 +36,7 @@
 
                     <!-- color picker -->
                     <ul class="container-color">
-                        <li class="color-item" id="color1"><input id="color-radio1" type="radio" onclick="e1click('black')" name="radio">
+                        <li class="color-item" id="color1"><input id="color-radio1" type="radio" onclick="e1click('black')" name="radio" checked="True">
                             <label for="color-radio1"></label>
                         </li>
                         <li class="color-item" id="color2"><input id="color-radio2" type="radio" onclick="e1click('green')" name="radio">

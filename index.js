@@ -1,10 +1,21 @@
-// comment
+/**
+ * todo:
+ * add a function to handle the single sign on info
+ *  -I cannot do this because i do not have access to it
+ * finnish adding the styles for the form
+ * if you feel like making a better thing to get the time for a 12 hour clock do it
+ * add a check to see if text is in the title area, if not do not allow the submit to function.
+ * add a check if text is in the text area, if not do not allow submit
+ * add a scrubber to make sure no bad characters are passed to the DB for XSS attacks 
+ * 
+ * strict:
+ * do not change the class names of the div's in the html it will break the js
+ * if you add more div's to the main body node you will break change template
+ * 
+ */
 
-// okay so it's better that you havea a comma sepearated list, ask tim for specifics
-// color variables, font variables, template type
 
 
-let currentDate =  new Date();
 
 let displayInfo =
 {
@@ -14,10 +25,32 @@ let displayInfo =
     title_text: 'yo mama',
     title_color: 0,
     box1_text: 'yo mama house',
-    box1_color: 1
+    entry1Color: "black"
 };
 
+function titleStuff()
+{
+    //this clears the title of default text
+    if(document.getElementById("titleText").innerText == "Title of Post"){
+        document.getElementById("titleText").innerText = "";
+    }
+    
+    //when enter is pressed it changes to the text area
+    document.getElementById("titleText").addEventListener("keypress",function(event){
+        if (event.key == "Enter"){
+            //console.log("enter event");
+            event.preventDefault(); // stops new line in the title
+            document.getElementById("entry1").focus(); // changes focus to the text area
+            return false;
+        }
+    });
 
+}
+
+//this will rearrange the title bar and text area.
+//if you add more elements pass this function an array with the order of the 
+//elements you want to use
+// eg t1click([1,2,0]) will change the current order where the first element is now at the end
 function t1click()
 {
     var wrapper = document.getElementsByClassName("dispTemplate");
@@ -36,11 +69,11 @@ function t1click()
     if(displayInfo.template_id == 1)
     {
         displayInfo.template_id = 2;
-        console.log(displayInfo.template_id);
+        //console.log(displayInfo.template_id);
     }
     else{
         displayInfo.template_id = 1;
-        console.log(displayInfo.template_id);
+        //console.log(displayInfo.template_id);
     }
 }
 
@@ -53,15 +86,39 @@ function e1click(color)
     displayInfo.entry1Color = color;
 }
 
-function e2click(color)
-{
-    document.getElementById("entry2").style.color = color;
-    displayInfo.entry2Color = color;
-}
 
 function upDateTimeSet()
 {
-document.getElementById("updateTime").innerText ="Last Update: " + (currentDate.getHours() % 12) + ":" + currentDate.getMinutes();
+    document.getElementById("updateTime").innerText = null;
+    document.getElementById("updateTime").innerText = setTime();
+    console.log("ping");
+}
+/*
+*this is an annoying way to make a 12 hour clock on the time update.
+*could/did not want to figure out how to embed the function in the assignment of the text
+*/
+function setTime()
+{   
+    var currentDate =  new Date();
+    var timeH = "";
+    var timeM = "";
+    console.log(timeM);
+    if (currentDate.getHours() % 12 == 0){
+        timeH = "12";
+    }
+    else{
+        timeH = currentDate.getHours()
+    }
+    
+    if(currentDate.getMinutes()< 10){
+        timeM = "0" + currentDate.getMinutes();
+    }
+    else
+    {
+        timeM = currentDate.getMinutes();
+    }
+    console.log(timeM);
+    return "Last Update: " + timeH + ":" + timeM;
 }
 
 function updateDisplayInfo()
@@ -74,30 +131,13 @@ function submitClick()
 {
     console.log("submit click");
     upDateTimeSet();
-    updateDisplayInfo()
-    var textareatext =  document.getElementById("entry1");
-    displayInfo.box1_text = textareatext.value;
+    updateDisplayInfo();
     console.log(displayInfo.title_text);
     console.log(displayInfo.box1_text);
+    //console.log(displayInfo);
     //var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
     //var theUrl = "http://eos-services.onu.edu:5000/api/user";
   //  xmlhttp.open("POST", theUrl);
  //   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 //    xmlhttp.send(JSON.stringify(displayInfo));
 }
-
-// post info
-
-/*
-if(mouseClick && button=red)
-{
-    button=Green;
-}
-else
-{
-    button=red;
-}
-
-*/
-
-//var x = document.getElementById("")
