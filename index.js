@@ -49,11 +49,12 @@ green('Mary');
 
 
 
-function t1click(arr)
+function t1click()
 {
     var wrapper = document.getElementsByClassName("dispTemplate");
     var items = wrapper[0].children;
     var elements = document.createDocumentFragment();
+    var arr = [1,0];
   
     arr.forEach(function(idx) {
         elements.appendChild(items[idx].cloneNode(true));
