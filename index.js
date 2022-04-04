@@ -122,10 +122,10 @@ function setTime()
         timeH = "12";
     }
     else{
-        timeH = currentDate.getHours()
+        timeH = currentDate.getHours() % 12;
     }
     
-    if(currentDate.getMinutes()< 10){
+    if(currentDate.getMinutes() < 10){
         timeM = "0" + currentDate.getMinutes();
     }
     else
