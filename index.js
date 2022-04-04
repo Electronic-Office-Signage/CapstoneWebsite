@@ -25,7 +25,7 @@ let displayInfo =
     title_text: 'yo mama',
     title_color: 0,
     box1_text: 'yo mama house',
-    entry1Color: 1
+    box1_color: 1
 };
 
 function titleStuff()
@@ -82,25 +82,24 @@ function t1click()
 
 function e1click(color)
 {
-    document.getElementById("entry1").style.color = color;
-    displayInfo.entry1Color = color;
+    document.getElementById("entry1").style.color = color
     if (color == "black") {
-        displayInfo.entry1Color = 1;
+        displayInfo.box1_color = 1;
     }
     if (color == "green"){
-        displayInfo.entry1Color = 2;
+        displayInfo.box1_color = 2;
     }
     if (color == "blue"){
-        displayInfo.entry1Color = 3;
+        displayInfo.box1_color = 3;
     }
     if (color == "red"){
-        displayInfo.entry1Color = 4;
+        displayInfo.box1_color = 4;
     }
     if (color == "yellow"){
-        displayInfo.entry1Color = 5;
+        displayInfo.box1_color = 5;
     }
     if (color == "orange"){
-        displayInfo.entry1Color = 6;
+        displayInfo.box1_color = 6;
     }
 }
 
