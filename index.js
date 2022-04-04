@@ -25,7 +25,7 @@ let displayInfo =
     title_text: 'yo mama',
     title_color: 0,
     box1_text: 'yo mama house',
-    entry1Color: "black"
+    entry1Color: 1
 };
 
 function titleStuff()
@@ -84,6 +84,24 @@ function e1click(color)
 {
     document.getElementById("entry1").style.color = color;
     displayInfo.entry1Color = color;
+    if (color == "black") {
+        displayInfo.entry1Color = 1;
+    }
+    if (color == "green"){
+        displayInfo.entry1Color = 2;
+    }
+    if (color == "blue"){
+        displayInfo.entry1Color = 3;
+    }
+    if (color == "red"){
+        displayInfo.entry1Color = 4;
+    }
+    if (color == "yellow"){
+        displayInfo.entry1Color = 5;
+    }
+    if (color == "orange"){
+        displayInfo.entry1Color = 6;
+    }
 }
 
 
@@ -91,7 +109,6 @@ function upDateTimeSet()
 {
     document.getElementById("updateTime").innerText = null;
     document.getElementById("updateTime").innerText = setTime();
-    console.log("ping");
 }
 /*
 *this is an annoying way to make a 12 hour clock on the time update.
@@ -102,7 +119,6 @@ function setTime()
     var currentDate =  new Date();
     var timeH = "";
     var timeM = "";
-    console.log(timeM);
     if (currentDate.getHours() % 12 == 0){
         timeH = "12";
     }
@@ -117,7 +133,6 @@ function setTime()
     {
         timeM = currentDate.getMinutes();
     }
-    console.log(timeM);
     return "Last Update: " + timeH + ":" + timeM;
 }
 
@@ -127,17 +142,23 @@ function updateDisplayInfo()
     displayInfo.box1_text = document.getElementById("entry1").value;
 }
 
+function postInfo()
+{
+    var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
+    var theUrl = "http://eos-services.onu.edu:5000/api/user";
+    xmlhttp.open("POST", theUrl);
+    xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+    xmlhttp.send(JSON.stringify(displayInfo));
+}
+
 function submitClick()
 {
     console.log("submit click");
     upDateTimeSet();
     updateDisplayInfo();
-    console.log(displayInfo.title_text);
-    console.log(displayInfo.box1_text);
-    //console.log(displayInfo);
-    //var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
-    //var theUrl = "http://eos-services.onu.edu:5000/api/user";
-  //  xmlhttp.open("POST", theUrl);
- //   xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-//    xmlhttp.send(JSON.stringify(displayInfo));
+    //postInfo();
+    // console.log(displayInfo.title_text);
+    // console.log(displayInfo.box1_text);
+    console.log(displayInfo);
+
 }
