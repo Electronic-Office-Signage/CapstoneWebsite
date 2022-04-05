@@ -3,6 +3,8 @@
 // okay so it's better that you havea a comma sepearated list, ask tim for specifics
 // color variables, font variables, template type
 
+
+
 console.log('Hello World');
 
 let name = 'Alex';
@@ -17,12 +19,12 @@ let person = {
 
 let displayInfo =
 {
-    name: 't-huff',
+    name: 'Example Name',
     uid: 12345,
     template_id: 0,
-    title_text: 'yo mama',
+    title_text: '',
     title_color: 0,
-    box1_text: 'yo mama house',
+    box1_text: '',
     box1_color: 1
 };
 
@@ -48,6 +50,7 @@ green('Mary');
 
 function t1click()
 {
+    displayInfo.template_id = 0;
     console.log("t1click");
     document.getElementById("dispTemplate").innerHTML = `<div class="header-row">
                                                             <h1 class="header-column-left">Example Name</h1>
@@ -115,6 +118,7 @@ function t1click()
 
 function t2click()
 {
+    displayInfo.template_id = 1;
     document.getElementById("dispTemplate").innerHTML = `<div>
                                                             <form class="grid-container">
                                                                 <!--<label for="entry1" class="entry-1">box1</label>-->
@@ -231,7 +235,13 @@ function e2click(color)
 
 function submitClick()
 {
+    //~~~ get the text from the entry, add to object
+    //~~~ 
     console.log("submit click");
+
+    var message = $('textarea#entry1').val();
+    displayInfo.box1_text = message;
+
     var xmlhttp = new XMLHttpRequest();   // new HttpRequest instance 
     var theUrl = "http://eos-services.onu.edu:5000/api/user";
     xmlhttp.open("POST", theUrl);
