@@ -154,6 +154,7 @@ input {
   display: block;
   font-family: Arial, Helvetica, sans-serif;
   height: 200px;
+  font-size: 48px;
 }
 
 .entry-2 {
@@ -163,6 +164,8 @@ input {
   display: block;
   font-family: Arial, Helvetica, sans-serif;
   height: 200px;
+  font-size: 48px;
+
 }
 
 .entry-3 {
@@ -171,6 +174,8 @@ input {
   clear: both;
   display: block;
   height: 200px;
+  font-size: 48px;
+
 }
 
 /* Header */
@@ -233,7 +238,6 @@ footer {
 {
   display: inline-block;
   line-height: 30px;
-  width: 20%;
   background-color: rgb(0, 0, 0);
   text-align: center;
   height: 30px;
