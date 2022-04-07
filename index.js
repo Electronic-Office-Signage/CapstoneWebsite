@@ -1,11 +1,6 @@
 
 console.log('Hello World');
 
-
-
-
-
-
 let displayInfo =
 {
     name: 'Example Name',
@@ -17,10 +12,6 @@ let displayInfo =
     box1_color: 1
 };
 
-
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
     updateClock();
   });
@@ -28,6 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
 function t1click()
 {
     displayInfo.template_id = 0;
+    displayInfo.title_text = $('input#title').val();
+    displayInfo.box1_text = $('textarea#entry1').val();
     console.log("t1click");
     document.getElementById("dispTemplate").innerHTML = `<div class="header-row">
                                                             <input id="title" class="header-column-left" placeholder="enter title text here" maxlength="18">
@@ -90,11 +83,17 @@ function t1click()
 
                                                             </form>
                                                         </div>`;
+    
+    
+    $('input#title').val(displayInfo.title_text);
+    $('textarea#entry1').text(displayInfo.box1_text);
 }
 
 function t2click()
 {
     displayInfo.template_id = 1;
+    displayInfo.title_text = $('input#title').val();
+    displayInfo.box1_text = $('textarea#entry1').val();
     document.getElementById("dispTemplate").innerHTML = `
 
                                                         <div>
@@ -158,6 +157,8 @@ function t2click()
                                                             <input id="title" class="header-column-left" placeholder="enter title text here" maxlength="18">
                                                             <h1 id="time" class="header-column-right"></h1>
                                                         </div>`;
+    $('input#title').val(displayInfo.title_text);
+    $('textarea#entry1').text(displayInfo.box1_text);
     // alert("template 1 selected");
 }
 
