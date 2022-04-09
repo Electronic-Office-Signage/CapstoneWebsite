@@ -277,7 +277,9 @@ function updateClock() {
     var now = new Date();
     var hour;
     var minutes;
+    hour = now.getHours();
     if(now.getHours() > 12) hour = now.getHours() - 12;
+
 
     minutes = (now.getMinutes()).toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false})
 
