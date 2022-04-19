@@ -1,16 +1,7 @@
 
 console.log('Hello World');
 
-let displayInfo =
-{
-    name: 'Example Name',
-    uid: 12345,
-    template_id: 0,
-    title_text: '',
-    title_color: 0,
-    box1_text: '',
-    box1_color: 1
-};
+let displayInfo = { name: 'Example Name', uid: 12345, template_id: 0, title_text: '', title_color: 0, box1_text: '', box1_color: 1 };
 
 document.addEventListener("DOMContentLoaded", function() {
     updateClock();

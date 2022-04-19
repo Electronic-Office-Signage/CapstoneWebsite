@@ -47,6 +47,8 @@ body {
   justify-content: center;
   padding: 10px;
   float: left;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
   /* display: inline-block; */
 }
 
@@ -55,10 +57,14 @@ label {
   align-items: center;
   justify-content: center;
   display: block;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
 
 input:checked + label {
   background: #FFA071;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
 }
 
 input {
@@ -269,7 +275,7 @@ footer {
   clear: both;
   position: relative;
   height: 50px;
-  margin-top: -60px;
+  margin-top: -70px;
   padding: 5px;
   text-align: center;
 }
@@ -292,4 +298,37 @@ footer {
 #submit_button:hover{
   color: #000000;
   background-color: #ffcba6;
+}
+
+#submit_button {
+  position: relative;
+  /* background-color: #04AA6D; */
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#submit_button:after {
+  content: "";
+  background: #ffffff;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px!important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+#submit_button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
 }
